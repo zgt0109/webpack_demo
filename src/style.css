@@ -1,0 +1,6 @@
+body {background: red}
+
+.hello {
+    color: green;
+    background: url('./icon.png');
+}

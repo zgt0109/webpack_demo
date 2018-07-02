@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
   devServer:{
     contentBase: './dist',
@@ -25,6 +26,18 @@ module.exports = {
                 'style-loader',
                 'css-loader'
             ]
+        },
+        {
+            test: /\.(png|svg|jpg|gif)$/,
+            use: ['file-loader']
+        },
+        {
+            test: /\.(csv|tsv)$/,
+            use: ['csv-loader']
+        },
+        {
+            test: /\.xml$/,
+            use: ['xml-loader']
         }
       ]
   }
